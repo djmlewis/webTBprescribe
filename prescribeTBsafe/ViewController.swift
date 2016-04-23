@@ -40,9 +40,9 @@ class ViewController: UIViewController {
         config.preferences.javaScriptEnabled = true
         self.webView = WKWebView(frame: self.placeHolderView.frame, configuration: config)
         self.webView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        //self.placeHolderView.removeFromSuperview()
-        //self.placeHolderView = nil
-        self.placeHolderView.addSubview(self.webView)
+        self.placeHolderView.removeFromSuperview()
+        self.placeHolderView = nil
+        self.view.addSubview(self.webView)
         self.webView.loadRequest(NSURLRequest(URL: path))
     }
 
