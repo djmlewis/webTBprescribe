@@ -11,8 +11,9 @@ import WebKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var webView: UIWebView!
+    @IBOutlet var webView: WKWebView!
     
+    @IBOutlet weak var placeHolderView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,15 @@ class ViewController: UIViewController {
         {
             return
         }
+        
+        let config = WKWebViewConfiguration()
+        config.preferences.javaScriptCanOpenWindowsAutomatically = true
+        config.preferences.javaScriptEnabled = true
+        self.webView = WKWebView(frame: self.placeHolderView.frame, configuration: config)
+        self.webView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        //self.placeHolderView.removeFromSuperview()
+        //self.placeHolderView = nil
+        self.placeHolderView.addSubview(self.webView)
         self.webView.loadRequest(NSURLRequest(URL: path))
     }
 

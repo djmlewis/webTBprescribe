@@ -17,21 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7h-S6-DtZ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUH-mW-XD4">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="t7h-S6-DtZ" secondAttribute="trailing" id="WyM-mu-Dub"/>
-                            <constraint firstItem="t7h-S6-DtZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fvi-4z-j4E"/>
-                            <constraint firstItem="t7h-S6-DtZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qcd-Cd-B1g"/>
-                            <constraint firstItem="t7h-S6-DtZ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="uTC-4Z-Vxm"/>
+                            <constraint firstItem="jUH-mW-XD4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4el-Vm-ayo"/>
+                            <constraint firstItem="jUH-mW-XD4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="LH0-Kt-Hl5"/>
+                            <constraint firstAttribute="trailing" secondItem="jUH-mW-XD4" secondAttribute="trailing" id="Oqj-LI-sc5"/>
+                            <constraint firstItem="jUH-mW-XD4" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="SSX-pA-F2H"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="t7h-S6-DtZ" id="j3b-O9-Wfj"/>
+                        <outlet property="placeHolderView" destination="jUH-mW-XD4" id="4fX-Ve-Y9e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
